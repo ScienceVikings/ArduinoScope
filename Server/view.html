@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>Science!</title>
+    <script type="text/javascript" src="smoothie.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
+</head>
+<body>
+    <h1>
+        Arduino Scope
+    </h1>
+    <div>
+        Serial Path: <input type="text" id="path" placeholder="COM* or /dev/usb/tty-*"/><br/>
+        <button onclick="setPath()">Set Path</button>
+    </div>
+    <div>
+        Connection status: <span id="status">Loading...</span><br/>
+        <button onclick="reconnect()">Reconnect</button>
+    </div>
+    <div>
+        <canvas id="chart" width="600" height="200"></canvas>
+    </div>
+    <div>
+        <h2>Log</h2>
+        <ul id="errors">
+        </ul>
+    </div>
+</body>
+</html>
